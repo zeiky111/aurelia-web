@@ -1,0 +1,21 @@
+Image Placement Plan:
+
+1. Hero Section (index.html, line ~67):
+   REPLACE: <div class="hero-placeholder"> ... </div>
+   WITH: <img src="images/img4.jpg" alt="Aurelia Students" style="...">
+
+2. Feature 1 - Personalized Learning (index.html, line ~124):
+   REPLACE: <div class="feature-placeholder"><i class="fas fa-chalkboard-user"></i></div>
+   WITH: <img src="images/img1.png" alt="Classroom Learning">
+
+3. Feature 2 - Interactive Experience (index.html, line ~142):
+   REPLACE: <div class="feature-placeholder"><i class="fas fa-users"></i></div>
+   WITH: Keep as is or use img1.png again for consistency
+
+4. Testimonial 1 (index.html, line ~178):
+   ADD BEFORE: <div class="testimonial-image">
+      <img src="images/img3.png" alt="Student Testimonial">
+   </div>
+
+5. About Team (about.html):
+   Replace team member placeholder avatars with img2.png for instructor
