@@ -141,10 +141,10 @@
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
 
+                        <!-- Honeypot field (hidden) -->
+                        <input type="hidden" name="_honey" style="display:none">
+                        <!-- Disable CAPTCHA -->
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
-
-                        <div id="formStatus" style="display: none; padding: 12px; border-radius: 8px; margin-bottom: 15px;"></div>
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>

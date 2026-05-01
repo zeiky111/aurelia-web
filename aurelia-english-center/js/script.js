@@ -24,8 +24,19 @@ if (hamburger) {
 }
 
 // ===== Contact Form Submission =====
-// FormSubmit.co handles the form submission directly
-// No JavaScript intervention needed
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // FormSubmit.co will handle the POST request
+        // Allow form to submit normally (don't prevent default)
+        return true;
+    });
+}
 
 // ===== Smooth Scrolling =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
