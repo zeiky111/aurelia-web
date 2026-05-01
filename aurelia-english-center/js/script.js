@@ -24,54 +24,8 @@ if (hamburger) {
 }
 
 // ===== Contact Form Submission =====
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Validate form
-        if (!name || !email || !subject || !message) {
-            showFormStatus('Please fill in all required fields.', 'error');
-            return;
-        }
-
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-
-        // Simulate delay
-        setTimeout(() => {
-            showFormStatus('Thank you for your message! We will get back to you soon.', 'success');
-            contactForm.reset();
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Send Message';
-        }, 1500);
-    });
-}
-
-function showFormStatus(message, type) {
-    formStatus.textContent = message;
-    formStatus.style.display = 'block';
-    formStatus.style.color = type === 'success' ? '#4CAF50' : '#f44336';
-    formStatus.style.padding = '12px';
-    formStatus.style.borderRadius = '5px';
-    formStatus.style.backgroundColor = type === 'success' ? '#e8f5e9' : '#ffebee';
-
-    if (type === 'success') {
-        setTimeout(() => {
-            formStatus.style.display = 'none';
-        }, 5000);
-    }
-}
+// FormSubmit.co handles the form submission directly
+// No JavaScript intervention needed
 
 // ===== Smooth Scrolling =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
